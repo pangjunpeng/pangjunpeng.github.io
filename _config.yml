@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
+title: 小红帽的博客
+subtitle: 万丈高楼平地起, 切忌浮躁!
+description: 重拾荒废一年的博客
+author: 庞军鹏
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://pangjunpeng.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
