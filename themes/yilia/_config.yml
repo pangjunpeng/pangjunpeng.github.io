@@ -116,10 +116,10 @@ slider:
 #  friends: false
 smart_menu:
   innerArchive: '所有文章'
-  #friends: '友链'
+  #friends: '友情链接'
   aboutme: '关于我'
 
-#friends:
+#friends: 
   
 
-aboutme: <center> 一个人的命运啊，当然要靠自我奋斗 <br/>但是也要考虑到历史的行程。<br/><a href="https://pangjunpeng.github.io/2018/03/21/%E9%87%8D%E6%8B%BE%E8%8D%92%E5%BA%9F%E4%B8%80%E5%B9%B4%E7%9A%84%E5%8D%9A%E5%AE%A2/">关于我</a></center>
+aboutme:  <span style="text-align:center;"> 一个人的命运啊，当然要靠自我奋斗 <br/>但是也要考虑到历史的行程。<br/><a href="https://pangjunpeng.github.io/aboutme">关于我</a></span>
