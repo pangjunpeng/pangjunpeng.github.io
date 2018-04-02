@@ -33,3 +33,5 @@ comments: true
 可以去网上找一个别人的域名（备案过的），[点我查询备案号](http://www.miitbeian.gov.cn/publish/query/indexFirst.action)，然后去后台把人家的域名和备案号贴进去，等待审核通过后，将自己的域名加入`域名白名单`，然后把前面的网址改为自己的。
 
 就可以绕过备案审核限制啦！接下来就去后台自定义喜欢的风格吧~
+
+## 对了，不要忘了每篇文章标题前加`comments: true`哦
