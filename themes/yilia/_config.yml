@@ -85,8 +85,8 @@ duoshuo: false
 wangyiyun: false
 
 #3、畅言
-changyan_appid: false
-changyan_conf: false
+changyan_appid: cytxMqHwU
+changyan_conf: prod_440f6a03086e972e952f1e3e3e99955c
 
 #4、Disqus 在hexo根目录的config里也有disqus_shortname字段，优先使用yilia的
 disqus: false

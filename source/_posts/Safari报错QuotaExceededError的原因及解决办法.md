@@ -2,6 +2,7 @@
 title: Safari报错QuotaExceededError的原因及解决办法
 date: 2018-03-30 08:47:02
 tags: bug
+comments: true
 ---
 ## 首先，这个报错是在IOS的safari浏览器的无痕模式下才有的！！
 
