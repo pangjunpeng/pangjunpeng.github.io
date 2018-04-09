@@ -1,7 +1,9 @@
 ---
 title: 为什么5<3<1结果为true?(隐式转换的锅)
 date: 2018-04-03 17:53:49
-tags: js
+tags: 
+- js
+- Q&A
 comments: true
 ---
 
