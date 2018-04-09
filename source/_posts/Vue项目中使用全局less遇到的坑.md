@@ -7,8 +7,8 @@ tags: Q&A
 最近在vue项目中加入了less，方法很简单，`webpack.base.conf.js`中加入
 ```javascript
 {
-	test  : /\.less$/,
-	loader: "style-loader!css-loader!less-loader",
+  test  : /\.less$/,
+  loader: "style-loader!css-loader!less-loader",
 }
 ```
 即可。   
