@@ -4,8 +4,8 @@
 
 # Site
 title: 小红帽的博客
-subtitle: Just For Fun
-description: 重拾荒废一年的博客
+subtitle: Just For Fun ~
+description: 万丈高楼平地起，切忌浮躁！
 author: 庞军鹏
 language:
 timezone:
@@ -25,7 +25,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: README.md
 
 # Writing
 new_post_name: :title.md # File name of new posts
