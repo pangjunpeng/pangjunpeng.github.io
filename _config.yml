@@ -81,6 +81,11 @@ deploy:
   repository: git@github.com:pangjunpeng/pangjunpeng.github.io.git
   branch: master
 
+browsersync:
+  logLevel: "warn"
+  ghostMode:
+    scroll: true
+
 # All Article
 jsonContent:
     meta: false
