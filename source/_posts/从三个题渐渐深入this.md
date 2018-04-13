@@ -1,5 +1,5 @@
 ---
-title: 从从三个题渐渐深入this
+title: 从三个题渐渐深入this
 date: 2018-04-12 14:53:58
 tags: js
 ---
