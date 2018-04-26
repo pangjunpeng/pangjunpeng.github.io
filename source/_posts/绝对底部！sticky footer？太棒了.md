@@ -1,0 +1,24 @@
+---
+title: 绝对底部！sticky footer？太棒了
+date: 2018-04-26 20:03:08
+tags: css
+---
+先甩图
+![](https://upload-images.jianshu.io/upload_images/11264410-c1baac727d9e321f.png)
+下面这个**温馨提示**。页面长度不够，固定显示在底部，长度超出跟着页面走，也是在底部。
+虽然产品没有要求，但是出于程序员的天性，就得把他弄好，不弄出来别扭！
+
+但是，想了半天也没想出来怎么弄(只能想到js...)，页面长度不知道啊喂，百度喽（谁让英语不好呢）。。。segmentfault、群里各种问，终于了解到原来这是一种经典布局（原谅我浅陋了），叫**`sticky footer`**
+
+所谓sticky footer
+> 如果页面内容不够长的时候，页脚块粘贴在视窗底部；如果内容足够长时，页脚块会被内容向下推送。
+
+实现这种效果主要有两种方式
+大致看了一遍了解了其原理：
++ 负margin（圣杯布局就是靠这样，古人的智慧我辈不及也）
+	1. 给内容区content加一层`wrapper`包裹，将需要sticky的元素(就叫他`tips`吧)与之同级
+	2. 将`wrapper`padding-bottom出`tips`高度的距离
+	3. 核心(我感觉...)就是给wrapper设置一个`min-height`来确保tips可以在底部
+我觉得这种方式里最核心的就这三点，其余`position:relative`和`clear: both`个人感觉都没什么用，运行之后发现确实没什么用，可能是为了兼容各种情况(IE?)吧，遇到bug后再看印象会更深，现在先不记，给自己挖个坑。
+
++ flex实现sticky footer（未完待续）
