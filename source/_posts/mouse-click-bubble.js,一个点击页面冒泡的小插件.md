@@ -1,7 +1,9 @@
 ---
 title: mouse-click-bubble.js,一个点击页面冒泡的小插件
 date: 2018-04-28 19:01:05
-tags: wheels
+tags: 
+- js
+- wheels
 ---
 今天在逛博客，偶然发现人家页面上有点击冒个文字的效果。觉得挺好玩，给自己博客也加个吧  
 一想原理，就是定位到鼠标所在位置，然后向上改变top，然后opacity:0，然后remove。
