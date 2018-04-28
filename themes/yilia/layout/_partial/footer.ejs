@@ -11,7 +11,10 @@
   </div>
   <script src="/mouse-click-bubble.js"></script>
   <script>
-	new MouseBubble();
+	if(navigator.userAgent.indexOf('Mobile')===-1){
+		new MouseBubble();
+	}
+	
 	(function(){
 		var bp = document.createElement('script');
 		var curProtocol = window.location.protocol.split(':')[0];
