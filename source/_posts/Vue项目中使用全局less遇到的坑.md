@@ -4,7 +4,7 @@ date: 2018-04-09 09:54:16
 tags: Q&A
 ---
 
-最近在vue项目中加入了less，方法很简单，`webpack.base.conf.js`中加入
+最近在vue项目中加入了less，方法很简单，`npm install less less-loader --save`然后`webpack.base.conf.js`中加入
 ```javascript
 {
   test  : /\.less$/,
