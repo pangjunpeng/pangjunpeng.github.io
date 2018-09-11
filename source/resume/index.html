@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    #resume:not(a) {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-bottom: 5px;
+      font-family: PingFang SC, Hiragino Sans GB, Helvetica Neue, Microsoft Yahei, WenQuanYi Micro Hei, sans-serif;
+      color: #333;
+    }
+
+    a {
+      color: #08c;
+      text-decoration: none;
+    }
+
+    strong {
+      margin: 0 5px;
+    }
+
+    li {
+      margin: 5px 0
+    }
+
+    p {
+      padding-left: 20px;
+    }
+
+    h2 {
+      border-bottom: 1px solid
+    }
+
+    ol li {
+      margin: 10px 0;
+    }
+
+    dt {
+      display: list-item;
+      list-style: disc;
+    }
+
+    dl {
+      margin: 25px 0 20px 0;
+    }
+
+    dd {
+      margin: 10px 0;
+      font-size: .9em;
+      line-height: 1.5em;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .justify {
+      padding-right: 40px;
+      margin: 20px -20px;
+      list-style: none;
+      overflow: hidden;
+    }
+
+    .justify span {
+      float: left;
+      width: 33%;
+    }
+
+    .justify span:last-child {
+      text-align: right;
+    }
+
+    /* .justify{
+      padding-right: 40px;
+      list-style: inhreit;
+      display: flex;
+      justify-content: space-between;
+    } */
+    .clearfix::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .base li {
+      float: left;
+      width: 50%;
+      list-style: circle;
+    }
+
+    li.block {
+      width: 100%;
+    }
+  
+  </style>
+</head>
+<body>
+<div id="resume">
+  <h1 class="center">庞军鹏</h1>
+  <h2>基本资料</h2>
+  <ul class="base clearfix">
+    <li>性别：男</li>
+    <li>年龄：23</li>
+    <li>籍贯：山西运城</li>
+    <li>手机：18435155822</li>
+    <li>博客：<a href="https://pangjunpeng.com" target="_blank">https://pangjunpeng.com</a></li>
+    <li>邮箱：<a href="mailto:justdoit0212@foxmail.com">justdoit0212@foxmail.com</a></li>
+    <li class="block">Github：<a href="https://github.com/pangjunpeng" target="_blank">https://github.com/pangjunpeng</a>
+    </li>
+    <li class="block">个人组件库：<a href="https://pangjunpeng.com/myWheels/" target="_blank">https://pangjunpeng.com/myWheels/</a>
+    </li>
+  </ul>
+  <h2>教育经历</h2>
+  <ul>
+    <li class="justify">
+      <span>2013 - 2017</span>
+      <span>太原科技大学（本科）</span>
+      <span>网络工程</span>
+    </li>
+  </ul>
+  <h2>个人能力</h2>
+  <ol>
+    <li>熟练掌握<strong>HTML5 CSS3</strong>，掌握动画，过渡，响应式等常用技术，像素级还原UI稿</li>
+    <li>熟练掌握<strong>JavaScript</strong>，追求对语言特性的深入理解</li>
+    <li>熟练掌握<strong>VueJS</strong>常用功能，能独立开发常用组件，熟悉<strong>Vue-Router</strong>,<strong>Vuex</strong>等核心插件</li>
+    <li>熟练掌握<strong>Less</strong>/<strong>Sass</strong>等CSS预处理语言，熟练使用<strong>ES6</strong></li>
+    <li>熟悉<strong>webpack/gulp</strong>等构建工具，能独立搭建开发工作流</li>
+    <li>熟悉<strong>Mobile Web</strong>及<strong>微信</strong>开发环境，了解小程序技术</li>
+    <li>热爱前端，追求开发高质量、高可维护性的代码，对用户体验有极致的追求</li>
+  </ol>
+  <h2>项目经历</h2>
+  <ul>
+    <li class="justify">
+      <span>2017.7 - 至今</span>
+      <span>北京科蓝软件系统股份有限公司</span>
+      <span>前端开发</span>
+    </li>
+    <ul>
+      <li>部门：光大银行</li>
+      <li>主要职责：与同事密切配合，高效完成任务。优化前端工作流程，营造技术氛围</li>
+      <dl>
+        <dt><strong>公募基金和私募产品大集合</strong></dt>
+        <dd>在客户端内实现产品展示，详情介绍，产品购买等功能，在微信公众号内增加产品列表入口</dd>
+        <dd><strong>技术栈</strong>：Vue,
+          Vue-Router。使用vue-cli搭建工作环境，webpack内配置proxytable实现跨域，vue-router实现路由跳转，better-scroll实现下拉刷新功能
+        </dd>
+        <dd><strong>技术难点</strong>：上拉加载，由于better-scroll所提供上拉加载方法不贴合需求，故自己实现上拉加载方法</dd>
+        <dd><strong>收获</strong>：了解vm.$nextTick方法，了解vue生命周期，了解vue过渡动画等知识</dd>
+      </dl>
+      <dl>
+        <dt><strong>企业微信公众号预申请开立对公账户需求</strong></dt>
+        <dd>为减少客户申请难度，提升客户感受，在企业微信公众号内开发预约开户功能</dd>
+        <dd><strong>技术栈</strong>：Angular.js, ui-router。使用百度地图SDK，实现网点选择功能。canvas实现前端图片压缩上传功能</dd>
+        <dd><strong>技术难点</strong>：
+          <ul>
+            <li>geolocation定位兼容性问题</li>
+            <li>坐标转换坑、相应算法分割</li>
+            <li>iPhone拍照莫名旋转90°</li>
+          </ul>
+        
+        </dd>
+        <dd>
+          <strong>收获</strong>：激发了我深入学习原生js的动力，学会看文档，对陌生框架不再恐惧。对<strong>异步</strong>，<strong>this</strong>，<strong>原型链</strong>等知识点有了更加深入的理解
+        </dd>
+      </dl>
+    </ul>
+  </ul>
+  <h2>自我评价</h2>
+  <p>热爱前端，热爱技术，不局限自己于前端。善于沟通，对用户体验有着极高的追求。</p>
+</div>
+</body>
+</html>
