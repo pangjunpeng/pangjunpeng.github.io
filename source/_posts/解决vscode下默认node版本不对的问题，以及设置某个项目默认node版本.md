@@ -52,20 +52,18 @@ Run `npm config delete prefix` or `nvm use --delete-prefix v6.12.3 --silent` to 
 + 还有说什么卸掉nvm的就不说了。。。（什么鬼）
 + 最后，在一个角落里，找到一个答案，他没有华丽的辞藻，也没有赞，有的只是一句
 > Apparently the default shellArgs for osx are set to bash while I'm using zsh. I solved the problem by setting the shellArgs in my user settings to an empty array:
-```
-"terminal.integrated.shellArgs.osx": []
+    ```
+    "terminal.integrated.shellArgs.osx": []
 
-```
+    ```
 意思就是，你们都没解决我的问题，我用的zsh，在vscode的settings里加一句`"terminal.integrated.shellArgs.osx": []`就好了  
 
 多么朴实，多么直达主题。我要登上我的Stack Overflow给他一个赞，然鹅
-```
-Thanks for the feedback! Votes cast by those with less than 15 reputation are recorded, but do not change the publicly displayed post score.
-```
+> Thanks for the feedback! Votes cast by those with less than 15 reputation are recorded, but do not change the publicly displayed post score.
+
 给他个评论吧
-```
-You must have 50 reputation to comment
-```
+> You must have 50 reputation to comment
+
 好吧，我只能在心里默默感谢这位兄弟了。  
 至于为什么这样能解决，我也是似懂非懂，好像是vscode默认用的bash，。。。但是我试了一下bash是正常的，而且terminal上明明写着zsh，烦恼~
 
