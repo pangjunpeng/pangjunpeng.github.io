@@ -1,5 +1,5 @@
 ---
-title: 解决vscode下默认node版本不对的问题，以及设置某个项目默认node版本
+title: 解决vscode下默认node版本不对的问题，以及使用avn设置某个项目默认node版本
 date: 2018-12-17 14:54:12
 tags: bug
 ---
