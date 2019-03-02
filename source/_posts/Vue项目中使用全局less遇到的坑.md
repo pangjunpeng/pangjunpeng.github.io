@@ -1,7 +1,9 @@
 ---
 title: Vue项目中使用全局less遇到的坑
 date: 2018-04-09 09:54:16
-tags: Q&A
+tags: 
+  - Q&A
+  - vue
 ---
 
 最近在vue项目中加入了less，方法很简单，`npm install less less-loader --save`然后`webpack.base.conf.js`中加入
