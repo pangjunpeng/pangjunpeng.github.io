@@ -23,4 +23,4 @@ navigator到另一个页面后再JSON.parse竟然报错，说这不是一个json
 
 微信的坑真的是。。堪比上古时代IE
 
-![](https://upload-images.jianshu.io/upload_images/11264410-987eaa118aa4752e.jpg)
+![](/images/11264410-987eaa118aa4752e.jpg)

@@ -8,7 +8,7 @@ comments: true
 ---
 
 今天同事问了我一道题  
-![](https://upload-images.jianshu.io/upload_images/11264410-af45b47addca2184.png)
+![](/images/11264410-af45b47addca2184.png)
 
 **问：为什么输出出来了**
 

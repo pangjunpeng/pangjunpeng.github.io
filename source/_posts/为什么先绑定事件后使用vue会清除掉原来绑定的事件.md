@@ -11,8 +11,8 @@ tags:
 
 刚来大约一周多，正赶上一个版本提测，就跟着改bug，其中有个功能没有做。然后就我来做，也没多难。  
 是这样的，密码框要做一个可见控件，就这种。
-![](https://upload-images.jianshu.io/upload_images/11264410-4b72acf5772aad42.png?imageMogr2/auto-orient/)
-![](https://upload-images.jianshu.io/upload_images/11264410-9e39e1480d66127a.png?imageMogr2/auto-orient/)
+![](/images/11264410-4b72acf5772aad42.png?imageMogr2/auto-orient/)
+![](/images/11264410-9e39e1480d66127a.png?imageMogr2/auto-orient/)
 倒也没多难，用jq写就太操蛋了。而且在改了一周jq的bug后，我快疯了。  
 其实jq倒也没啥，主要是原来的架构，同一个东西，完全没有复用起来，改一个东西得全局搜索，要改3处，甚至5处。你说恶不恶心！！！
 
@@ -108,7 +108,7 @@ container.appendChild(el.cloneNode(true));
 ```
 这一句。
 记得在jquery中`$(el).clone(true)`会复制元素所有的事件处理，我以为原生的这块也是这样，查[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/cloneNode)却发现
-![](https://upload-images.jianshu.io/upload_images/11264410-a1282b9f3a954e5d.png)
+![](/images/11264410-a1282b9f3a954e5d.png)
 > **deep**(可选) 是否采用深度克隆,如果为true,则该节点的所有后代节点也都会被克隆,如果为false,则只克隆该节点本身
 
 就是说原生`cloneNode`方法参数为`true`只是复制后代节点而已，也不复制事件。

@@ -6,9 +6,9 @@ tags: hexo
 因为以前搭过hexo，所以这次速度快了许多，稍微熟悉一下，申请github pages，npm install hexo，hexo init等等一气呵成，一下午也就搞定了。
 
 **但是！**（再也不用editor.md了（捂脸哭）码了半天一个重启...说好的保存呢啊摔！！！）家里公司两台电脑啊，两端同步操作就懵逼了，而且对刚买的mac还不熟悉...  
-![](https://upload-images.jianshu.io/upload_images/11264410-85c864b78cff126e.jpg)
+![](/images/11264410-85c864b78cff126e.jpg)
 其实也可以写好md传到云盘，然后到家down下来发布。。。  
-<img src="https://upload-images.jianshu.io/upload_images/11264410-febcbec4a270819f.jpg" width="100"/>
+<img src="/images/11264410-febcbec4a270819f.jpg" width="100"/>
 **emmm......我！就！不！！！  
 闹心，他不应该是这个样子(╯‵□′)╯︵┻━┻**
 

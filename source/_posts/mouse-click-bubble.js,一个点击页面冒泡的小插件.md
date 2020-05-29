@@ -74,7 +74,7 @@ WTF？明明已经obj.timer了啊，怎么会互相影响？
 
 完美！
 看下效果图
-![](https://upload-images.jianshu.io/upload_images/11264410-7fcdbc801a43d351.gif)
+![](/images/11264410-7fcdbc801a43d351.gif)
 其实就是博客现在的样子啦
 
 放上地址吧，以后写的小轮子都放github了  [直达链接](https://github.com/pangjunpeng/myWheel)
