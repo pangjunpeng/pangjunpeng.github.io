@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="小红帽的博客">
 <meta property="og:description" content="今天逛知乎的时候看见了一个困扰已久的问题的解决办法，相信大家在初学的时候都碰到过表单对齐，像这种那个时候一贯地解决办法就是，加空格，定位等等(空格不同设备占位不同的问题下面有解释)但是总感觉定的不是很爽">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11264410-49b429bfa9274346.png">
-<meta property="og:updated_time" content="2019-09-19T02:19:52.208Z">
+<meta property="og:image" content="https://pangjunpeng.com/images/11264410-49b429bfa9274346.png">
+<meta property="og:updated_time" content="2020-05-29T11:23:06.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="经典布局之姓名-联系方式对齐">
 <meta name="twitter:description" content="今天逛知乎的时候看见了一个困扰已久的问题的解决办法，相信大家在初学的时候都碰到过表单对齐，像这种那个时候一贯地解决办法就是，加空格，定位等等(空格不同设备占位不同的问题下面有解释)但是总感觉定的不是很爽">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/11264410-49b429bfa9274346.png">
+<meta name="twitter:image" content="https://pangjunpeng.com/images/11264410-49b429bfa9274346.png">
   
     <link rel="alternative" href="/atom.xml" title="小红帽的博客" type="application/atom+xml">
   
@@ -171,7 +171,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天逛知乎的时候看见了一个困扰已久的问题的解决办法，相信大家在初学的时候都碰到过表单对齐，像这种<br><img src="https://upload-images.jianshu.io/upload_images/11264410-49b429bfa9274346.png" alt=""><br>那个时候一贯地解决办法就是，加空格，定位等等(空格不同设备占位不同的问题下面有解释)但是总感觉定的不是很爽<br><a id="more"></a><br>其实可以利用<code>text-align</code>属性，<code>text-align: justify;</code>可以用来两端对齐，但是用的时候经常发现不生效是怎么回事呢。这个属性是针对多行文本的，因为一行文本两端对齐多丑啊，肯定不会这么设计的。  </p>
+        <p>今天逛知乎的时候看见了一个困扰已久的问题的解决办法，相信大家在初学的时候都碰到过表单对齐，像这种<br><img src="/images/11264410-49b429bfa9274346.png" alt=""><br>那个时候一贯地解决办法就是，加空格，定位等等(空格不同设备占位不同的问题下面有解释)但是总感觉定的不是很爽<br><a id="more"></a><br>其实可以利用<code>text-align</code>属性，<code>text-align: justify;</code>可以用来两端对齐，但是用的时候经常发现不生效是怎么回事呢。这个属性是针对多行文本的，因为一行文本两端对齐多丑啊，肯定不会这么设计的。  </p>
 <p>既然知道了是多行才能生效，那我们可以再给他造一行，比如在span标签内再加一个span设为inline-block,因为两端对齐，自然这个元素就得<code>width: 100%;</code>，不然顶不齐呀，然后这个时候高度被撑开了，因为我们多了一个元素，可以设定height高度，继而<code>oveflow: hidden</code>。效果就出来了</p>
 <p>不过像这种没有实际意义只是用来辅助的元素我们没必要再加一个标签，用CSS3的after微伪元素就好了，实际代码如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">span&#123;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  width: <span class="number">100</span>px;</span><br><span class="line">  height: <span class="number">20</span>px;</span><br><span class="line">  text-align: justify;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line">span::after&#123;</span><br><span class="line">  content: <span class="string">''</span>;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  width: <span class="number">100</span>%</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="不过还没完"><a href="#不过还没完" class="headerlink" title="不过还没完"></a>不过还没完</h3><p>为什么空格不可以呢，以前我以为是&nbsp;在不同浏览器下表现不一样，然而只是由于字体的原因。。。<br>还顺带解决了一个困惑了我多年的问题，font-size和height到底有啥关系。<br>据大神讲：<br>    一个div不设置高度，其高度是由line-height决定的，而line-height不设置的话他的值是normal！！！那么我们怎么知道他到底多高，这个就涉及到字体设计了，通过观察可以发现不同字体下，div计算出来的高度是不同的，而字体的设计有上部下部以及基线，当多行文本碰到f和g这种上下非常突出的单词时，就会挨得非常近，极其影响美观，所以设计师们在设计字体的时候都会自己定一个字体默认的行高和空格宽度，也就是说我们看到的空格和默认行高都是字体内部定义的。所以会出现font-size和height在不同设备下莫名波动的问题，所以最好看情况定高度和行高</p>
@@ -434,6 +434,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
@@ -442,15 +446,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">

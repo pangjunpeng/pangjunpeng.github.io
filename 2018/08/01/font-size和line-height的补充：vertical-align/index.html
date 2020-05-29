@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="小红帽的博客">
 <meta property="og:description" content="上一篇经典布局之姓名-联系方式对齐中解释了font-size和line-height以及字体设计的关系，今天看到张鑫旭大神的CSS深入理解vertical-align和line-height的基友关系才发现，上回理解的只是冰山一角，文章挺长，看完做个总结怕忘喽">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11264410-b3c00c0d8193aed0.png">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11264410-663e948ef75d831b.jpg">
-<meta property="og:updated_time" content="2019-09-19T02:19:52.205Z">
+<meta property="og:image" content="https://pangjunpeng.com/images/11264410-b3c00c0d8193aed0.png">
+<meta property="og:image" content="https://pangjunpeng.com/images/11264410-663e948ef75d831b.jpg">
+<meta property="og:updated_time" content="2020-05-29T11:23:06.775Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="font-size和line-height的补充：vertical-align">
 <meta name="twitter:description" content="上一篇经典布局之姓名-联系方式对齐中解释了font-size和line-height以及字体设计的关系，今天看到张鑫旭大神的CSS深入理解vertical-align和line-height的基友关系才发现，上回理解的只是冰山一角，文章挺长，看完做个总结怕忘喽">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/11264410-b3c00c0d8193aed0.png">
+<meta name="twitter:image" content="https://pangjunpeng.com/images/11264410-b3c00c0d8193aed0.png">
   
     <link rel="alternative" href="/atom.xml" title="小红帽的博客" type="application/atom+xml">
   
@@ -181,13 +181,13 @@
 <li>vertical-align: top（其他值也可）</li>
 <li>接下来说<br>可见前两个都有相应的缺陷（当然也不是说vertical没有缺陷，只是为了引入今天的话题），vertical-align顺带还解决了内联元素垂直居中的问题（虽然很别扭）</li>
 </ol>
-<h3 id="以前我一直以为，那条缝是标签之间的空隙（空格），今天我发现我错了，缝隙是由看不见的幽灵元素的行高撑起来的，而不是说那条缝本身就是空格"><a href="#以前我一直以为，那条缝是标签之间的空隙（空格），今天我发现我错了，缝隙是由看不见的幽灵元素的行高撑起来的，而不是说那条缝本身就是空格" class="headerlink" title="以前我一直以为，那条缝是标签之间的空隙（空格），今天我发现我错了，缝隙是由看不见的幽灵元素的行高撑起来的，而不是说那条缝本身就是空格"></a>以前我一直以为，那条缝是标签之间的空隙（空格），今天我发现我错了，缝隙是由看不见的<code>幽灵元素</code>的行高撑起来的，而不是说那条缝本身就是空格</h3><p><img src="https://upload-images.jianshu.io/upload_images/11264410-b3c00c0d8193aed0.png" alt=""><br>这张图清晰明了的说明了这个问题<br>    <code>vertical-align</code>默认是<code>baseline</code>基线对齐，也就是<code>x</code>的下边缘<br>再回顾字体默认行高的知识，就能更清晰地知道问题所在，所以解决缝隙又多了一条解决办法，而上面的<code>font-size: 0</code>也只是变相的改变了<code>line-height</code>而已<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5. div&#123; line-height: 5px; &#125; //小于字体大小就可以</span><br></pre></td></tr></table></figure></p>
+<h3 id="以前我一直以为，那条缝是标签之间的空隙（空格），今天我发现我错了，缝隙是由看不见的幽灵元素的行高撑起来的，而不是说那条缝本身就是空格"><a href="#以前我一直以为，那条缝是标签之间的空隙（空格），今天我发现我错了，缝隙是由看不见的幽灵元素的行高撑起来的，而不是说那条缝本身就是空格" class="headerlink" title="以前我一直以为，那条缝是标签之间的空隙（空格），今天我发现我错了，缝隙是由看不见的幽灵元素的行高撑起来的，而不是说那条缝本身就是空格"></a>以前我一直以为，那条缝是标签之间的空隙（空格），今天我发现我错了，缝隙是由看不见的<code>幽灵元素</code>的行高撑起来的，而不是说那条缝本身就是空格</h3><p><img src="/images/11264410-b3c00c0d8193aed0.png" alt=""><br>这张图清晰明了的说明了这个问题<br>    <code>vertical-align</code>默认是<code>baseline</code>基线对齐，也就是<code>x</code>的下边缘<br>再回顾字体默认行高的知识，就能更清晰地知道问题所在，所以解决缝隙又多了一条解决办法，而上面的<code>font-size: 0</code>也只是变相的改变了<code>line-height</code>而已<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5. div&#123; line-height: 5px; &#125; //小于字体大小就可以</span><br></pre></td></tr></table></figure></p>
 <p>再者，缝隙是由于<code>vertical-align</code>和<code>line-height</code>联手造成的，也可以从<code>vertical-align</code>入手，而<code>vertical-align</code>对block元素无感，所以设置图片为block也可解决此问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6. img&#123; display: block; &#125;</span><br></pre></td></tr></table></figure></p>
 <h3 id="衍生功能：垂直居中"><a href="#衍生功能：垂直居中" class="headerlink" title="衍生功能：垂直居中"></a>衍生功能：垂直居中</h3><p>设置line-height，让幽灵元素vertical-align: middle;就可以了(吗?)，据张老师说，绝对居中的位置和字体的middle不是一个位置，字体会略微下沉，也就是说我们看起来的垂直居中其实不居中，那怎么办呢，还是老办法<code>font-size</code>，设为0，管他什么基线上线下线，全在一条线上，不就居中了吗，哈哈，张老师真是牛逼</p>
 <h3 id="还有个进阶知识"><a href="#还有个进阶知识" class="headerlink" title="还有个进阶知识"></a>还有个进阶知识</h3><pre><code>一个inline-block元素，如果里面没有inline内联元素，或者overflow不是visible，则该元素的基线就是其margin底边缘，否则，其基线就是元素里面最后一行内联元素的基线。
 </code></pre><p>头疼，这句话已经说得很明白了，总的来说，任何莫名其妙出现的对不齐问题都可以用font-size: 0解决，因为它可以让各种线归于一处，可以让line-height变为0，当然，后遗症什么的还得慢慢填坑，所以有时候并不是一个好的解决办法</p>
 <p>想深入了解透彻的话，感觉就得涉及字体设计方面了</p>
-<p>先这样吧，趁月初需求没分下来赶紧学习写两篇博客记录记录，月中有个临时投产，呀好烦哦<br><img src="https://upload-images.jianshu.io/upload_images/11264410-663e948ef75d831b.jpg" alt=""></p>
+<p>先这样吧，趁月初需求没分下来赶紧学习写两篇博客记录记录，月中有个临时投产，呀好烦哦<br><img src="/images/11264410-663e948ef75d831b.jpg" alt=""></p>
 
       
 
@@ -446,6 +446,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
@@ -454,15 +458,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">

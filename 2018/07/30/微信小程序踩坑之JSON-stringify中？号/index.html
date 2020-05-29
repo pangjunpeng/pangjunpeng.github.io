@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="小红帽的博客">
 <meta property="og:description" content="首先吐槽一下微信小程序的跳转页面，竟然没有传值，传值只能通过拼接url取参数，wtf，虽然还可以用storage，但总觉得传值这个东西用storage就有点。。大材小用？也不对。人家本意就不是来干这个的，非得让人家干，虽然也能干。本着不信邪的态度，找了半天资料，得，gg，老老实实拼接字符串吧，但是我要传的是个对象啊没办法，JSON.stringify吧，问题也随之而来 navigator到另一个页">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11264410-987eaa118aa4752e.jpg">
-<meta property="og:updated_time" content="2019-09-19T02:19:52.207Z">
+<meta property="og:image" content="https://pangjunpeng.com/images/11264410-987eaa118aa4752e.jpg">
+<meta property="og:updated_time" content="2020-05-29T11:23:06.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序踩坑之JSON.stringify中？号">
 <meta name="twitter:description" content="首先吐槽一下微信小程序的跳转页面，竟然没有传值，传值只能通过拼接url取参数，wtf，虽然还可以用storage，但总觉得传值这个东西用storage就有点。。大材小用？也不对。人家本意就不是来干这个的，非得让人家干，虽然也能干。本着不信邪的态度，找了半天资料，得，gg，老老实实拼接字符串吧，但是我要传的是个对象啊没办法，JSON.stringify吧，问题也随之而来 navigator到另一个页">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/11264410-987eaa118aa4752e.jpg">
+<meta name="twitter:image" content="https://pangjunpeng.com/images/11264410-987eaa118aa4752e.jpg">
   
     <link rel="alternative" href="/atom.xml" title="小红帽的博客" type="application/atom+xml">
   
@@ -181,7 +181,7 @@
 </ol>
 <p>推断出问题原因所在，开始解决问题，分割?，那我们就把我们的？转义掉，用到了api<code>encodeURIComponent</code>，传之前，先把有url的参数转义了，在接受的时候再<code>decodeURIComponent</code>转义回来，顺利解决。</p>
 <p>微信的坑真的是。。堪比上古时代IE</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/11264410-987eaa118aa4752e.jpg" alt=""></p>
+<p><img src="/images/11264410-987eaa118aa4752e.jpg" alt=""></p>
 
       
 
@@ -444,6 +444,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
@@ -452,15 +456,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">

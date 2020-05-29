@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="小红帽的博客">
 <meta property="og:description" content="图中标题前的 长得像梅花 的四个方块业务给了个文档让做成页面（为什么不做成微信帖子），文档里有这么个标志，选取不到，但是复制-粘贴到编辑器的竟然好使，还心想挺智能的嘛，结果浏览器上直接为，emmm…… 心路历程：">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11264410-682635b5c3e6432b.png">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11264410-aa2a6a8ab8c4eae1.png">
-<meta property="og:updated_time" content="2019-09-19T02:19:52.205Z">
+<meta property="og:image" content="https://pangjunpeng.com/images/11264410-682635b5c3e6432b.png">
+<meta property="og:image" content="https://pangjunpeng.com/images/11264410-aa2a6a8ab8c4eae1.png">
+<meta property="og:updated_time" content="2020-05-29T11:23:06.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html中不识别四个方块符号？自己画一个！">
 <meta name="twitter:description" content="图中标题前的 长得像梅花 的四个方块业务给了个文档让做成页面（为什么不做成微信帖子），文档里有这么个标志，选取不到，但是复制-粘贴到编辑器的竟然好使，还心想挺智能的嘛，结果浏览器上直接为，emmm…… 心路历程：">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/11264410-682635b5c3e6432b.png">
+<meta name="twitter:image" content="https://pangjunpeng.com/images/11264410-682635b5c3e6432b.png">
   
     <link rel="alternative" href="/atom.xml" title="小红帽的博客" type="application/atom+xml">
   
@@ -172,11 +172,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://upload-images.jianshu.io/upload_images/11264410-682635b5c3e6432b.png" alt=""><br>图中标题前的 长得像梅花 的四个方块<br>业务给了个文档让做成页面（为什么不做成微信帖子），文档里有这么个标志，选取不到，但是复制-粘贴到编辑器的竟然好使，还心想挺智能的嘛，结果浏览器上直接为，emmm……</p>
+        <p><img src="/images/11264410-682635b5c3e6432b.png" alt=""><br>图中标题前的 长得像梅花 的四个方块<br>业务给了个文档让做成页面（为什么不做成微信帖子），文档里有这么个标志，选取不到，但是复制-粘贴到编辑器的竟然好使，还心想挺智能的嘛，结果浏览器上直接为，emmm……</p>
 <h3 id="心路历程："><a href="#心路历程：" class="headerlink" title="心路历程："></a>心路历程：</h3><a id="more"></a>
 <ul>
 <li>因为文档有好几个小标题，遵循语义化的规则，就选用ul&gt;li，然后就想找找list-style有没有这个形状的，很遗憾，找了一圈，没有！</li>
-<li>list-style-image？看起来不错，截个小图放上<br><img src="https://upload-images.jianshu.io/upload_images/11264410-aa2a6a8ab8c4eae1.png" alt=""><br>看起来不错哦，但是！放到手机上有点小模糊，身为一个前端工程师，肩负着用户体验这一神圣使命，怎么能容许模糊？？？</li>
+<li>list-style-image？看起来不错，截个小图放上<br><img src="/images/11264410-aa2a6a8ab8c4eae1.png" alt=""><br>看起来不错哦，但是！放到手机上有点小模糊，身为一个前端工程师，肩负着用户体验这一神圣使命，怎么能容许模糊？？？</li>
 <li>算了自己画一个吧，看起来也不是很难。<br>一个span包裹四个i，变为inline-block定宽，i给margin背景色，然后transform:rotate(45deg)，bingo~<br>代码就不放了，就是这个效果，看起来也很不错，但是一想，这个页面里面我可以给class重复使用，如果以后也有项目要用呢，我再写一遍？虽然代码量很少…谈不上一点复用性健壮性，如果一行字特别小，定的这个高度会不显得特别不协调，岂不是还要针对这一个单独修改？能不能做成自适应行高的，说来就来</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 获取高度</span></span><br><span class="line"><span class="comment"> * 因为高度没有在标签中style属性内定义，所以直接点取不到</span></span><br><span class="line"><span class="comment"> * 先写个获取属性的方法</span></span><br><span class="line"><span class="comment"> * 再来获取高度</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">// 获取计算后的样式</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">getStyle</span>(<span class="params">el</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="built_in">window</span>.getComputedStyle?<span class="built_in">window</span>.getComputedStyle(el, <span class="literal">null</span>):el.currentStyle</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="comment">// 获取父元素高度，设span宽高为父元素高度的一半。html结构是这样的&lt;h1&gt;&lt;span&gt;&lt;/span&gt; 这是一个标题&lt;/h1&gt;</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">setSide</span>(<span class="params">el</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> pHeight = getStyle(el).height</span><br><span class="line">   el.style.width = el.style.height = pHeight.slice(<span class="number">0</span>, height.length - <span class="number">2</span>) / <span class="number">2</span> + <span class="string">'px'</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
@@ -454,6 +454,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
@@ -462,15 +466,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">

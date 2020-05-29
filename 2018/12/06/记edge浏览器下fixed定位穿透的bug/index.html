@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="小红帽的博客">
 <meta property="og:description" content="首先，开篇点题，吐槽edge！   历时不到一个月的艰苦开发，周末两天，晚上10点，昨晚通宵之后，抓饭直播新版终于上线了。因为历史遗留问题导致项目开发困难重重。前后端未完全分离，大部分老代码的数据还是jsp注入的方式，当然跟今天要说的这个问题没有太大关系。咳咳言归正传，说bug, fix定位在edge浏览器下鼠标穿透问题">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11264410-28c0e8867f89c5dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
-<meta property="og:updated_time" content="2019-09-19T02:19:52.209Z">
+<meta property="og:image" content="https://pangjunpeng.com/images/11264410-28c0e8867f89c5dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:updated_time" content="2020-05-29T11:23:06.784Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记edge浏览器下fixed定位穿透的bug">
 <meta name="twitter:description" content="首先，开篇点题，吐槽edge！   历时不到一个月的艰苦开发，周末两天，晚上10点，昨晚通宵之后，抓饭直播新版终于上线了。因为历史遗留问题导致项目开发困难重重。前后端未完全分离，大部分老代码的数据还是jsp注入的方式，当然跟今天要说的这个问题没有太大关系。咳咳言归正传，说bug, fix定位在edge浏览器下鼠标穿透问题">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/11264410-28c0e8867f89c5dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta name="twitter:image" content="https://pangjunpeng.com/images/11264410-28c0e8867f89c5dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
   
     <link rel="alternative" href="/atom.xml" title="小红帽的博客" type="application/atom+xml">
   
@@ -173,7 +173,7 @@
       
         <p>首先，开篇点题，吐槽edge！  </p>
 <p>历时不到一个月的艰苦开发，周末两天，晚上10点，昨晚通宵之后，<a href="http://www.justfun.live" target="_blank" rel="noopener">抓饭直播</a>新版终于上线了。因为历史遗留问题导致项目开发困难重重。前后端未完全分离，大部分老代码的数据还是jsp注入的方式，当然跟今天要说的这个问题没有太大关系。咳咳<br>言归正传，说bug, fix定位在edge浏览器下鼠标穿透问题<br><a id="more"></a><br>本来这篇文章是中午打的，结果一忙就这个点了(2018年12月06日23:35:34)哎。。。  打车中，预计还得一个小时，就把这个写完</p>
-<p>是这样的,页面布局是这样婶的<br><img src="https://upload-images.jianshu.io/upload_images/11264410-28c0e8867f89c5dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt=""><br>左边的nav导航为共用模块，前面说过项目为jsp项目，多页面。在左侧有功能弹板，点击之后弹出弹板，所以fixed定位。然而，在运营的机器上。。edge浏览器（他们都喜欢用那个，分辨率又小，兼容性又不好。。fk）出现了穿透现象，就仿佛不存在一样，鼠标的一切功能都无视了他，只是可以看见而已。<br>于是我试图说服运营，拿出了浏览器市场份额的数据<a href="http://gs.statcounter.com/" target="_blank" rel="noopener">statcounter</a>，然而！先有运营后有天，在这个运营主导的团队里，我们是没有话语权的,直接一句“那是让用户换电脑？”， ，，，，，，，忍了忍了</p>
+<p>是这样的,页面布局是这样婶的<br><img src="/images/11264410-28c0e8867f89c5dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt=""><br>左边的nav导航为共用模块，前面说过项目为jsp项目，多页面。在左侧有功能弹板，点击之后弹出弹板，所以fixed定位。然而，在运营的机器上。。edge浏览器（他们都喜欢用那个，分辨率又小，兼容性又不好。。fk）出现了穿透现象，就仿佛不存在一样，鼠标的一切功能都无视了他，只是可以看见而已。<br>于是我试图说服运营，拿出了浏览器市场份额的数据<a href="http://gs.statcounter.com/" target="_blank" rel="noopener">statcounter</a>，然而！先有运营后有天，在这个运营主导的团队里，我们是没有话语权的,直接一句“那是让用户换电脑？”， ，，，，，，，忍了忍了</p>
 <p><strong>于是分析么，main块的弹板是没有问题的，那就把出问题的弹窗每一个页面都引一遍呗，别无他法</strong><br>一开始以为z-index问题，如果是z-index问题怎么可能还看得见。<br>移动端的穿透原理也跟这个完全不搭边。<br>试着在head里加meta啥啥啥IE=Edge，也不管用。<br>试了配置autoprefixer，也没用。不知道他是个什么原理。<br>毫无办法，束手无策</p>
 <p>在运营主导的团队开发实在是太难受，时不时的插个需求，而且还是现在，立刻，马上。哎。。。</p>
 <p>不过前两天看见新闻，微软终于要拥抱Chromium了，链接<a href="https://www.windowscentral.com/microsoft-building-chromium-powered-web-browser-windows-10" target="_blank" rel="noopener">windowscentral</a>，简直是前端工程师的福音啊</p>
@@ -436,6 +436,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
@@ -444,15 +448,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
