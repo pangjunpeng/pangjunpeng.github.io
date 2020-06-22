@@ -12,11 +12,11 @@ tags:
 <!--more-->
 一时间不知道问题所在，就去看litten大神的[《Yilia源码目录结构及构建须知》](https://github.com/litten/hexo-theme-yilia/wiki/Yilia%E6%BA%90%E7%A0%81%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E5%8F%8A%E6%9E%84%E5%BB%BA%E9%A1%BB%E7%9F%A5)，可以发现控制这部分的代码应该在`source-src`目录中，控制台F12可以发现input中model值为search  
 
-![](/images/11264410-a8c44a171db55fda.PNG)  
+![](/assets/images/11264410-a8c44a171db55fda.PNG)  
 
 于是  
 
-![](/images/11264410-a2ecd150e31fdb86.PNG)  
+![](/assets/images/11264410-a2ecd150e31fdb86.PNG)  
 
 ```app.$set('search', '#' + (name ? name : e.target.innerHTMl))```  
 
@@ -29,7 +29,7 @@ tags:
 这就很明显了，`innerHTML`会先解析为DOM树，而`&amp;`正是html中的转义符，改为`innerText`便可以正常操作了，不过这样就不能自定义一些标签样式了（不过也没这样用过），如果想要innerHTML的效果，可以使用replace方法哈哈。  
 
 **但是**，改完之后好像并没有生效，上面那行代码根本没有调用啊喂，真正的凶手在下面
-![](/images/11264410-e6123d62a44242be.PNG)
+![](/assets/images/11264410-e6123d62a44242be.PNG)
 把下面这个`$em.innerHTML`改了就可以了  
 
 **记得改完之后npm run dist编译一下，当然你也可以直接去dist文件中改（如果你找到了的话）**

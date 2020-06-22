@@ -24,8 +24,6 @@
 			color: #09F;
 		}
 	</style>
-    <script src="phaser.min.js"></script>
-    <script src="catch-the-cat.js"></script>
 </head>
 <body>
     <header>
@@ -40,17 +38,14 @@
             </a>
         </p>
         <div>
-            <img src="/images/11264410-455335f4aeee9727.gif" alt="404">
+            <img src="/assets/images/11264410-455335f4aeee9727.gif" alt="404">
         </div>
         <p><strong>不如坐下来玩个游戏吧！《圈小猫》</strong></p>
-        <div id="catch-the-cat"></div>
-        <script>
-            new CatchTheCatGame({w:11,h:11,r:20,backgroundColor:16777215,parent:"catch-the-cat",statusBarAlign:"center",credit:"www.pangjunpeng.com"})
-        </script>
+        <iframe src="/cat.html" frameborder="0" width="570" height="501"></iframe>
     </div>
     <footer>
         <img src="/home.png" alt="返回首页" width="30">
-        <a href="javascript:location.href=location.origin" title="返回首页">返回首页</a>
+        <a href="javascript:location.href=location.origin" title="返回首页" target="_self">返回首页</a>
     </footer>
 </body>
 </html>

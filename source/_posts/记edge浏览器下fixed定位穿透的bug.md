@@ -11,7 +11,7 @@ tags: bug
 本来这篇文章是中午打的，结果一忙就这个点了(2018年12月06日23:35:34)哎。。。  打车中，预计还得一个小时，就把这个写完
 
 是这样的,页面布局是这样婶的
-![](/images/11264410-28c0e8867f89c5dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
+![](/assets/images/11264410-28c0e8867f89c5dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
 左边的nav导航为共用模块，前面说过项目为jsp项目，多页面。在左侧有功能弹板，点击之后弹出弹板，所以fixed定位。然而，在运营的机器上。。edge浏览器（他们都喜欢用那个，分辨率又小，兼容性又不好。。fk）出现了穿透现象，就仿佛不存在一样，鼠标的一切功能都无视了他，只是可以看见而已。  
 于是我试图说服运营，拿出了浏览器市场份额的数据[statcounter](http://gs.statcounter.com/)，然而！先有运营后有天，在这个运营主导的团队里，我们是没有话语权的,直接一句“那是让用户换电脑？”， ，，，，，，，忍了忍了
 

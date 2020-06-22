@@ -29,6 +29,9 @@ skip_render:
 - README.md
 - baidu_verify_qfCRKp66Ye.html
 - google58b34a5c47978508.html
+- catch-the-cat.js
+- phaser.min.js
+- assets/**
 - myWheels/**
 - resume/**
 - mockLogin/**

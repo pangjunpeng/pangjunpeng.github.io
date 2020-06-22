@@ -180,10 +180,10 @@ readme参考地址
 在`main.js`中import进来，像别的包一样去使用吧，当然怎么用你自己最清楚。所以，`readme`一定要写好！
 
 main.js中  
-![](/images/11264410-08ed71fdb510e2c5.png)    
+![](/assets/images/11264410-08ed71fdb510e2c5.png)    
 
 页面内使用  
-![](/images/11264410-1cd4a1fa597997bb.png)  
+![](/assets/images/11264410-1cd4a1fa597997bb.png)  
 
 # 完结，撒花
 对了，如果想撤销发布的包，可以`unpublish`（发布之后24小时内可操作）

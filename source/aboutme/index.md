@@ -11,4 +11,4 @@ permalink: /aboutme
 
 最后发现还是前端有意思
 
-![放个图吧](/images/11264410-aa1c751a5a01b400.jpg)
+![放个图吧](/assets/images/11264410-aa1c751a5a01b400.jpg)
