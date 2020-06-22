@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="小红帽的博客">
 <meta property="og:description" content="上篇缓存问题，经后来多次测试发现，，，就只能等，一般一个小时后微信自己会清掉，微信这么个机制简直不给我们开发留活路，尝试过的办法在上一篇文章里，有懂的大神还望指教一二 好了继续说剩下的">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://pangjunpeng.com/images/11264410-ef20dbae7ec3e411.jpg">
-<meta property="og:updated_time" content="2020-05-29T11:23:06.721Z">
+<meta property="og:image" content="https://pangjunpeng.com/assets/images/11264410-ef20dbae7ec3e411.jpg">
+<meta property="og:updated_time" content="2020-06-22T10:41:16.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="加班近一个月中问题的总结（二）-剩余问题">
 <meta name="twitter:description" content="上篇缓存问题，经后来多次测试发现，，，就只能等，一般一个小时后微信自己会清掉，微信这么个机制简直不给我们开发留活路，尝试过的办法在上一篇文章里，有懂的大神还望指教一二 好了继续说剩下的">
-<meta name="twitter:image" content="https://pangjunpeng.com/images/11264410-ef20dbae7ec3e411.jpg">
+<meta name="twitter:image" content="https://pangjunpeng.com/assets/images/11264410-ef20dbae7ec3e411.jpg">
   
     <link rel="alternative" href="/atom.xml" title="小红帽的博客" type="application/atom+xml">
   
@@ -174,7 +174,7 @@
         <p>上篇缓存问题，经后来多次测试发现，，，就只能等，一般一个小时后微信自己会清掉，微信这么个机制简直不给我们开发留活路，尝试过的办法在上一篇文章里，有懂的大神还望指教一二</p>
 <p>好了继续说剩下的<br><a id="more"></a></p>
 <ul>
-<li>IOS定位问题，IOS10以上不让非https的方式获取，低版本下navigator获取地理位置有问题，直接错误码1，定位服务不可用，换用百度地图api后可行，不知道百度做了什么优化，翻源码好像也没有什么特别的<br><img src="/images/11264410-ef20dbae7ec3e411.jpg" alt=""></li>
+<li>IOS定位问题，IOS10以上不让非https的方式获取，低版本下navigator获取地理位置有问题，直接错误码1，定位服务不可用，换用百度地图api后可行，不知道百度做了什么优化，翻源码好像也没有什么特别的<br><img src="/assets/images/11264410-ef20dbae7ec3e411.jpg" alt=""></li>
 <li>微信定位后会记住位置授权，需在系统设置里 <code>通用-设置-还原-还原位置与隐私</code> 中还原</li>
 <li><p>IOS微信浏览器下方会有前进后退按钮，禁用方法</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">history.pushState(<span class="literal">null</span>, <span class="literal">null</span>, <span class="built_in">document</span>.URL)</span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'popstate'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  history.pushState(<span class="literal">null</span>, <span class="literal">null</span>, <span class="built_in">document</span>.URL)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -457,10 +457,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">周记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">bug</a>
               </li>
              
@@ -469,15 +465,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">周记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -490,6 +486,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">

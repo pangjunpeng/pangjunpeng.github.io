@@ -16,14 +16,14 @@
 <meta property="og:site_name" content="小红帽的博客">
 <meta property="og:description" content="接了个大需求，一个多月来每天晚上到家12点，虽说累了点倒也充实，每天记录一点问题及解决思路，趁最近有点空总结复习一下 首当其冲的就是微信的一大问题：顽固的缓存">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://pangjunpeng.com/images/11264410-139acafebc29b1bc.jpeg">
-<meta property="og:image" content="https://pangjunpeng.com/images/11264410-2936b8a76d1c96f8.jpg">
-<meta property="og:image" content="https://pangjunpeng.com/images/11264410-976edc7d762f3c43..jpg">
-<meta property="og:updated_time" content="2020-05-29T11:23:06.721Z">
+<meta property="og:image" content="https://pangjunpeng.com/assets/images/11264410-139acafebc29b1bc.jpeg">
+<meta property="og:image" content="https://pangjunpeng.com/assets/images/11264410-2936b8a76d1c96f8.jpg">
+<meta property="og:image" content="https://pangjunpeng.com/assets/images/11264410-976edc7d762f3c43..jpg">
+<meta property="og:updated_time" content="2020-06-22T10:41:16.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="加班近一个月中问题的总结（一）-微信缓存篇">
 <meta name="twitter:description" content="接了个大需求，一个多月来每天晚上到家12点，虽说累了点倒也充实，每天记录一点问题及解决思路，趁最近有点空总结复习一下 首当其冲的就是微信的一大问题：顽固的缓存">
-<meta name="twitter:image" content="https://pangjunpeng.com/images/11264410-139acafebc29b1bc.jpeg">
+<meta name="twitter:image" content="https://pangjunpeng.com/assets/images/11264410-139acafebc29b1bc.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="小红帽的博客" type="application/atom+xml">
   
@@ -186,9 +186,9 @@
 <li>设置meta标签，相当于设置http请求头cache-control，expires， pragma。。。<strong>一点作用都没有！！</strong></li>
 <li>ajax发送时请求体中加入 <code>cache: false</code>，也并没有什么卵用</li>
 <li>添加时间戳吧?t=123456的方式，添加时间戳，嗯！页面好像确实可以了，为什么接口获取到的数据还是以前的（后台也改bug了）？？？谁可以告诉我！！！</li>
-<li>请求体中也加入一个无意义的字段试试，vconsole发现确实是发过去了，但是为毛返回来的数据还是以前的！！！缓存就缓存为毛你能把接口也缓存住？？？<br><img src="/images/11264410-139acafebc29b1bc.jpeg" alt=""></li>
+<li>请求体中也加入一个无意义的字段试试，vconsole发现确实是发过去了，但是为毛返回来的数据还是以前的！！！缓存就缓存为毛你能把接口也缓存住？？？<br><img src="/assets/images/11264410-139acafebc29b1bc.jpeg" alt=""></li>
 </ul>
-<p>我已经不知道说啥了，心累了，受伤了<br>突然灵光一现，诶？服务器那边不是也有控制缓存的么，让他控制一下如何，好主意<br>结果询问得知，他那边设置的就是不缓存<br><img src="/images/11264410-2936b8a76d1c96f8.jpg" alt="">经历过绝望之后的笑容<br>嘿，嘿嘿，嘿嘿嘿<br>那算了，你给入口页加个时间戳吧，起码让首页不缓存</p>
+<p>我已经不知道说啥了，心累了，受伤了<br>突然灵光一现，诶？服务器那边不是也有控制缓存的么，让他控制一下如何，好主意<br>结果询问得知，他那边设置的就是不缓存<br><img src="/assets/images/11264410-2936b8a76d1c96f8.jpg" alt="">经历过绝望之后的笑容<br>嘿，嘿嘿，嘿嘿嘿<br>那算了，你给入口页加个时间戳吧，起码让首页不缓存</p>
 <p><strong>2.用户层面呢？</strong></p>
 <ul>
 <li>刷新(emmm…)</li>
@@ -204,7 +204,7 @@
 <li>所有需要用户来解决的问题，原则上来讲都不可行                            ×</li>
 </ol>
 <p>综上，全pass，谁来告诉我还有什么法子</p>
-<p>其实还有个终极办法，改名字。。。123.html改成456.html，虽然不合适，要是没办法解决就只能这样了呀，我们用的是gulp然后就去npm上找gulp-rev的用法<br>就在这个时候，测试告诉我他那几个手机突然间全好了，可是这中间我们谁也没动代码和服务器啊<br><img src="/images/11264410-976edc7d762f3c43..jpg" alt=""><br>发生了什么，难道是谁在幕后操控？？？<br>完！</p>
+<p>其实还有个终极办法，改名字。。。123.html改成456.html，虽然不合适，要是没办法解决就只能这样了呀，我们用的是gulp然后就去npm上找gulp-rev的用法<br>就在这个时候，测试告诉我他那几个手机突然间全好了，可是这中间我们谁也没动代码和服务器啊<br><img src="/assets/images/11264410-976edc7d762f3c43..jpg" alt=""><br>发生了什么，难道是谁在幕后操控？？？<br>完！</p>
 
       
 
@@ -456,10 +456,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">周记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">bug</a>
               </li>
              
@@ -468,15 +464,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">周记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -489,6 +485,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">

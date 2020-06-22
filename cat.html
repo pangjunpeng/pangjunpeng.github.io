@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圈小猫</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="catch-the-cat"></div>
+    <script src="/phaser.min.js"></script>
+    <script src="/catch-the-cat.js"></script>
+    <script>
+        window.game = new CatchTheCatGame({w:11,h:11,r:20,backgroundColor:16777215,parent:"catch-the-cat",statusBarAlign:"center",credit:"www.pangjunpeng.com"})
+    </script>
+</body>
+</html>

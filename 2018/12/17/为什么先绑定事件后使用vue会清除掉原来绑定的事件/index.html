@@ -16,14 +16,14 @@
 <meta property="og:site_name" content="小红帽的博客">
 <meta property="og:description" content="本来这篇文章应该是一个月前写的，奈何太忙，每天12点回，隔三差五的通个宵。最近好容易有空，赶紧补一补，记下来。 事情是这样的，项目是jsp，里面只有jquery。写一些简单的东西是很爽，维护起来想骂娘。 刚来大约一周多，正赶上一个版本提测，就跟着改bug，其中有个功能没有做。然后就我来做，也没多难。是这样的，密码框要做一个可见控件，就这种。倒也没多难，用jq写就太操蛋了。而且在改了一周jq的bu">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://pangjunpeng.com/images/11264410-4b72acf5772aad42.png?imageMogr2/auto-orient/">
-<meta property="og:image" content="https://pangjunpeng.com/images/11264410-9e39e1480d66127a.png?imageMogr2/auto-orient/">
-<meta property="og:image" content="https://pangjunpeng.com/images/11264410-a1282b9f3a954e5d.png">
-<meta property="og:updated_time" content="2020-05-29T11:23:06.721Z">
+<meta property="og:image" content="https://pangjunpeng.com/assets/images/11264410-4b72acf5772aad42.png?imageMogr2/auto-orient/">
+<meta property="og:image" content="https://pangjunpeng.com/assets/images/11264410-9e39e1480d66127a.png?imageMogr2/auto-orient/">
+<meta property="og:image" content="https://pangjunpeng.com/assets/images/11264410-a1282b9f3a954e5d.png">
+<meta property="og:updated_time" content="2020-06-22T10:41:16.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为什么先绑定事件后使用vue会清除掉原来绑定的事件">
 <meta name="twitter:description" content="本来这篇文章应该是一个月前写的，奈何太忙，每天12点回，隔三差五的通个宵。最近好容易有空，赶紧补一补，记下来。 事情是这样的，项目是jsp，里面只有jquery。写一些简单的东西是很爽，维护起来想骂娘。 刚来大约一周多，正赶上一个版本提测，就跟着改bug，其中有个功能没有做。然后就我来做，也没多难。是这样的，密码框要做一个可见控件，就这种。倒也没多难，用jq写就太操蛋了。而且在改了一周jq的bu">
-<meta name="twitter:image" content="https://pangjunpeng.com/images/11264410-4b72acf5772aad42.png?imageMogr2/auto-orient/">
+<meta name="twitter:image" content="https://pangjunpeng.com/assets/images/11264410-4b72acf5772aad42.png?imageMogr2/auto-orient/">
   
     <link rel="alternative" href="/atom.xml" title="小红帽的博客" type="application/atom+xml">
   
@@ -175,7 +175,7 @@
       
         <p>本来这篇文章应该是一个月前写的，奈何太忙，每天12点回，隔三差五的通个宵。最近好容易有空，赶紧补一补，记下来。</p>
 <p>事情是这样的，项目是jsp，里面只有jquery。写一些简单的东西是很爽，维护起来想骂娘。</p>
-<p>刚来大约一周多，正赶上一个版本提测，就跟着改bug，其中有个功能没有做。然后就我来做，也没多难。<br>是这样的，密码框要做一个可见控件，就这种。<br><img src="/images/11264410-4b72acf5772aad42.png?imageMogr2/auto-orient/" alt=""><br><img src="/images/11264410-9e39e1480d66127a.png?imageMogr2/auto-orient/" alt=""><br>倒也没多难，用jq写就太操蛋了。而且在改了一周jq的bug后，我快疯了。<br>其实jq倒也没啥，主要是原来的架构，同一个东西，完全没有复用起来，改一个东西得全局搜索，要改3处，甚至5处。你说恶不恶心！！！</p>
+<p>刚来大约一周多，正赶上一个版本提测，就跟着改bug，其中有个功能没有做。然后就我来做，也没多难。<br>是这样的，密码框要做一个可见控件，就这种。<br><img src="/assets/images/11264410-4b72acf5772aad42.png?imageMogr2/auto-orient/" alt=""><br><img src="/assets/images/11264410-9e39e1480d66127a.png?imageMogr2/auto-orient/" alt=""><br>倒也没多难，用jq写就太操蛋了。而且在改了一周jq的bug后，我快疯了。<br>其实jq倒也没啥，主要是原来的架构，同一个东西，完全没有复用起来，改一个东西得全局搜索，要改3处，甚至5处。你说恶不恶心！！！</p>
 <p>本来一开始想的先熟悉项目熟悉业务，加vue的事情后面再说。但是这个功能，让我决定，立刻，现在，马上，刻不容缓。于是我尝试在jsp中引入vue.js，试了一个demo发现是可行的</p>
 <p>于是在我加入下一版本开发的时候，就提枪上阵，引入vue，梳理项目结构。当然其中避免不了出现很多问题。印象最深的就是加载顺序的问题。<br><a id="more"></a><br>过程是这样的，新建<code>v-home.js</code>（因为项目本没有babel，想用es6，就加了一个babel，而其他文件杂乱不堪，又不能全部babel，所以加入前缀方便babel判断解析），加入页面底部<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"static/js/home/v-home.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
 <p>然后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">new Vue(&#123;</span><br><span class="line">  el: &apos;#main&apos;,</span><br><span class="line">  // ........</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
@@ -188,7 +188,7 @@
 <p><code>mount</code>函数为<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype.$mount = <span class="function"><span class="keyword">function</span> (<span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">  el,</span></span></span><br><span class="line"><span class="function"><span class="params">  hydrating</span></span></span><br><span class="line"><span class="function"><span class="params"></span>) </span>&#123;</span><br><span class="line">  el = el &amp;&amp; inBrowser ? query(el) : <span class="literal">undefined</span>;</span><br><span class="line">  <span class="keyword">return</span> mountComponent(<span class="keyword">this</span>, el, hydrating)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <p>然后<code>mountComponent</code>函数开始执行<code>beforeMount</code>钩子。按下不表</p>
 <p>这个问题的主要地方就在于<code>getOuterHTML</code>函数中<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">container.appendChild(el.cloneNode(<span class="literal">true</span>));</span><br></pre></td></tr></table></figure></p>
-<p>这一句。<br>记得在jquery中<code>$(el).clone(true)</code>会复制元素所有的事件处理，我以为原生的这块也是这样，查<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node/cloneNode" target="_blank" rel="noopener">MDN</a>却发现<br><img src="/images/11264410-a1282b9f3a954e5d.png" alt=""></p>
+<p>这一句。<br>记得在jquery中<code>$(el).clone(true)</code>会复制元素所有的事件处理，我以为原生的这块也是这样，查<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node/cloneNode" target="_blank" rel="noopener">MDN</a>却发现<br><img src="/assets/images/11264410-a1282b9f3a954e5d.png" alt=""></p>
 <blockquote>
 <p><strong>deep</strong>(可选) 是否采用深度克隆,如果为true,则该节点的所有后代节点也都会被克隆,如果为false,则只克隆该节点本身</p>
 </blockquote>
@@ -447,10 +447,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">周记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">bug</a>
               </li>
              
@@ -459,15 +455,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">周记</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -480,6 +476,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
